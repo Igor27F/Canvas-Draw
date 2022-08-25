@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas drawer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="frame">
+      <canvas id="canvas" width="800" height="600"></canvas>
+      <div id="coordinates">
+        <h4 id="mouseX">x:</h4>
+        <h4 id="mouseY">y:</h4>
+      </div>
+    </div>
+    <div id="dashboard">
+      Draw mode:
+      <button
+        id="buttonFreeMode"
+        class="selectedButton"
+        onclick="modeSelected('free')"
+      >
+        Free
+      </button>
+      <button id="buttonLinesMode" onclick="modeSelected('line')">Lines</button>
+      |
+      <input type="color" name="penColor" value="#000000" />
+      <input
+        type="range"
+        name="penWidth"
+        min="1"
+        max="100"
+        step="2"
+        value="5"
+      />
+      <button id="saver">Save</button>
+      <button id="clear" onclick="clearScreen()">Clear</button>
+      <br />
+      Custom line:
+      <label>x(start):</label>
+      <input class="customInput" type="number" name="inputStartX" value="0" />
+      <label>y(start):</label>
+      <input class="customInput" type="number" name="inputStartY" value="0" />
+      <label>x(end):</label>
+      <input class="customInput" type="number" name="inputEndX" value="0" />
+      <label>y(end):</label>
+      <input class="customInput" type="number" name="inputEndY" value="0" />
+      <button id="customDraw" type="submit" onclick="customDraw()">
+        Draw!
+      </button>
+    </div>
+    <img src="" id="myImage" />
+    <script src="script.js"></script>
+  </body>
+</html>

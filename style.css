@@ -1,0 +1,16 @@
+#canvas {
+  border: 1px solid black;
+  cursor: crosshair;
+}
+.selectedButton {
+  background-color: darkgray;
+}
+#frame {
+  display: flex;
+}
+#coordinates {
+  margin-left: 10px;
+}
+.customInput {
+  width: 40px;
+}
